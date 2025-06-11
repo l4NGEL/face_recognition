@@ -1,13 +1,12 @@
-# face-recognition
 # Derin Öğrenme Yaklaşımı ile Yüz Tanıma Sistemi
 
-Bu proje, gömme temelli (embedding-based) modern bir yüz tanıma sisteminin PyTorch ile sıfırdan geliştirilmesini kapsamaktadır. Projede, yüz algılama için MTCNN, yüz temsili üretimi için FaceNet mimarisi ve temsil uzayı optimizasyonu için Triplet Loss & Center Loss fonksiyonları birlikte kullanılmıştır. Sistem; maske, gözlük, poz değişimi gibi çevresel varyasyonlara karşı dayanıklı olacak şekilde eğitilmiş ve değerlendirilmiştir.
+Bu proje, gömme temelli modern bir yüz tanıma sisteminin PyTorch ile sıfırdan geliştirilmesini kapsamaktadır. Projede, yüz algılama için MTCNN, yüz temsili üretimi için FaceNet mimarisi ve temsil uzayı optimizasyonu için Triplet Loss & Center Loss fonksiyonları birlikte kullanılmıştır. Sistem; maske, gözlük, poz değişimi gibi çevresel varyasyonlara karşı dayanıklı olacak şekilde eğitilmiş ve değerlendirilmiştir.
 
-## 🔍 Proje Amacı
+## Proje Amacı
 
 Gömme temelli yüz tanıma yaklaşımlarını derinlemesine inceleyerek, yüksek doğrulukta çalışan ve gerçek zamanlı uygulanabilirliği olan bir sistem geliştirmek.
 
-## 📌 Kullanılan Yöntemler ve Mimariler
+## Kullanılan Yöntemler ve Mimariler
 
 - **Yüz Algılama:** MTCNN (Multi-task Cascaded Convolutional Networks)
 - **Embedding Üretimi:** Sıfırdan tasarlanmış FaceNet mimarisi (custom CNN)
@@ -16,7 +15,7 @@ Gömme temelli yüz tanıma yaklaşımlarını derinlemesine inceleyerek, yükse
   - Center Loss (opsiyonel olarak entegre edildi)
 - **Metrikler:** Öklidyen mesafesi ve Kosinüs benzerliği ile kimlik karşılaştırması
 
-## 📂 Veri Seti
+## Veri Seti
 
 - Kullanılan veri seti: CelebA'dan özel olarak türetilmiş ve filtrelenmiş alt küme
 - Kapsam:
@@ -36,21 +35,21 @@ Gömme temelli yüz tanıma yaklaşımlarını derinlemesine inceleyerek, yükse
 - Scheduler: CosineAnnealingLR
 - Triplet Mining: Semi-Hard ve Hard Negative Mining destekli
 
-## 🚀 Gerçek Zamanlı Uygulama
+## Gerçek Zamanlı Uygulama
 
 - OpenCV ile kamera üzerinden yüz tanıma demo uygulaması geliştirildi
 - Kişi ekleme ve tanıma için iki butonlu GUI arayüzü (Tkinter)
 
-## 🛠️ Altyapı
+## Altyapı
 
 - Google Colab (Tesla T4 GPU)
 - PyTorch, TorchVision, NumPy, Pandas, OpenCV, scikit-learn
 - Python 3.10+
 
-## 📁 Klasör Yapısı
+## Klasör Yapısı
 - preprocessing.py/ # Ön işleme kodu 
 - train.py # Model eğitim kodu
-- test.py # Test ve değerlendirme
+- folder.py # Dosyaların veri miktarını düzenleme kodu
 - demo.py # Gerçek zamanlı demo arayüz
 - README.md # Proje açıklaması
 
