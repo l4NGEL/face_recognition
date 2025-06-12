@@ -186,7 +186,7 @@ def main():
 
     for epoch in range(epochs):
         triplet_loss.margin = max(0.2, 0.6 * (0.93 ** epoch))  
-        print(f"\n📦 Epoch {epoch+1}/{epochs} | Margin: {triplet_loss.margin:.3f}")
+        print(f"\nEpoch {epoch+1}/{epochs} | Margin: {triplet_loss.margin:.3f}")
 
         train_loss, train_acc = train_one_epoch(model, train_loader, triplet_loss, center_loss, optimizer)
         val_loss, val_acc = validate(model, val_loader, triplet_loss)
@@ -200,16 +200,16 @@ def main():
         if val_acc > best_acc:
             best_acc = val_acc
             torch.save(model.state_dict(), "best_facenet_model.pth")
-            print(f"✅ Model saved. Best Val Acc: {best_acc:.4f}")
+            print(f"Model saved. Best Val Acc: {best_acc:.4f}")
             no_improve_epochs = 0
         else:
             no_improve_epochs += 1
-            print(f"⏳ No improvement: {no_improve_epochs}/{patience}")
+            print(f"No improvement: {no_improve_epochs}/{patience}")
             if no_improve_epochs >= patience:
-                print("🚓 Early stopping triggered.")
+                print("Early stopping triggered.")
                 break
 
-    print("🎉 Training completed.")
+    print("Training completed.")
     plot_metrics(train_losses, val_losses, train_accs, val_accs)
 
 if __name__ == "__main__":
