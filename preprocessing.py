@@ -31,7 +31,7 @@ for person_name in os.listdir(input_dir):
             if face is not None:
                 face = face.permute(1, 2, 0).add(1).div(2).mul(255).clamp(0, 255).byte().cpu().numpy()
                 Image.fromarray(face).save(save_path)
-                print(f"✅ Saved: {save_path}")
+                print(f"Saved: {save_path}")
             else:
                 print(f"No face detected: {img_path}")
 
