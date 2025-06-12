@@ -151,10 +151,10 @@ def recognize_faces():
                     if dist < min_dist:
                         min_dist, best_match = dist, name
                 if min_dist < 0.7:
-                    label = f"✅ {best_match} tanindi. Kapi acildi."
+                    label = f"{best_match} tanindi. Kapi acildi."
                     color = (0, 255, 0)  
                 else:
-                    label = "❌ Taninmiyor. Kapi kapali."
+                    label = "Taninmiyor. Kapi kapali."
                     color = (0, 0, 255)  
 
 
