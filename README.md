@@ -26,7 +26,7 @@ Gömme temelli yüz tanıma yaklaşımlarını derinlemesine inceleyerek, yükse
   - Normalize ([-1, 1] aralığı)
   - Veri artırma: yatay çevirme, ColorJitter, RandomAffine, RandomErasing
 
-## 🏗️ Model Mimarisi
+## Model Mimarisi
 
 - Derinlik: 4 konvolüsyon bloğu + ortalama havuzlama + tam bağlantılı katman
 - Aktivasyon: ReLU
